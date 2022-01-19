@@ -56,6 +56,7 @@ body * {
     box-shadow: 0px 10px 10px lightblue;
     
 }
+
 .card-login > h1 {
     color: #5487c4;
     
@@ -71,20 +72,50 @@ body * {
 
 }
 
-.textfield > input {
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    font-size: 10pt;
-    box-shadow: 0px 1px 1px rgb(197, 235, 248);
-    outline: none;
-    box-sizing: border-box;
+.textfield-input {
+  height: 30px;
+  width: 100%;
+  background-color: lightblue ;
+  box-sizing: border-box;
+  padding-left: 8px;
+  border: unset;
+  outline: none;
 
 }
+.login-border {
+    height: 1px;
+    width: 100%;
+    margin-bottom: 16px;
+    background-color: #5487c4 ;
+    transition: .3s ease-in-out;
+   
+}
+.login-border::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    margin-bottom: 16px;
+    background: linear-gradient(120deg, #ec5c8c, white );
+    transition: .3s ease-in-out;
+}
+
+.textfield-input:focus + .login-border::after {
+    width: 100%;
+} 
+
+.login-border.error {
+    background: red;
+}
+.login-border.error:after {
+    background: red;
+}
+
+
 
 .textfield > label {
-    color: white;
+    color: #5487c4;
+    font-weight: bold;
     font-size: 18px;
     margin-bottom: 10px;
 }
@@ -107,8 +138,24 @@ body * {
     background: #5487c4;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px white;
+    
 
 }
+.btn-login:hover {
+    background-color: #69a7f3 ;
+}
+.btn-login:disabled {
+    background: #acacac;
+    cursor: not-allowed;
+}
+
+.btn-login.error {
+    background: red;
+}
+.btn-login.success {
+    background: green;
+}
+
 
 @media only screen and (max-width: 950px){
     .card-login {

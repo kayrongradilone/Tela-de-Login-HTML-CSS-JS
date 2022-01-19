@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
     <script src="./login.js"></script>
+    <script defer src="./login.js"></script>
     <title>Bonzina</title>
 </head>
 <body>
@@ -23,15 +24,18 @@
         <div class="card-login">
             <h1>LOGIN</h1>
             <div class="textfield">
-                <label for="usuario">Usuário:</label>
-                <input type="text" name="usuario" placeholder="Digite o usuário" id="user">
+                <label for="usuario">Email:</label>
+                <input class="textfield-input" type="email" name="usuario" placeholder="Digite o Email" id="user">
+                <span class="login-border" ></span>
             </div>
             <div class="textfield">
                 <label for="usuario">Senha:</label>
-                <input type="password" name="senha" placeholder="Digite a senha">
+                <input class="textfield-input" type="password" name="senha" placeholder="Digite a senha">
+                <span class="login-border" ></span>
             </div>
 
-            <button class="btn-login" id="log" onclick="click()" >Login</button>
+            <button class="btn-login" >Login</button>
+            <a href="">Esqueceu a senha?</a>
 
         </div>
 
